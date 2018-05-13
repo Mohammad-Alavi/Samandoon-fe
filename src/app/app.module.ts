@@ -9,12 +9,14 @@ import { NgoApiService } from './services/api/ngo/ngo.api.service';
 import { ArticleApiService } from './services/api/article/article.api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { EventApiService } from './services/api/event/event.api.service';
+import { EventPageComponent } from './routes/event-page/event-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexPageComponent,
-    ArticlePageComponent
+    ArticlePageComponent,
+    EventPageComponent
   ],
   imports: [
     BrowserModule,
