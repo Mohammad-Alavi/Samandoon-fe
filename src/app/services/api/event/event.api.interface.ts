@@ -1,5 +1,5 @@
-import {Event} from '../../../objects/event';
+import { Event } from '../../../objects/event';
 
 export interface EventApiInterface {
-    onEventLoaded(event: Event);
+  onEventLoaded(event: Event);
 }

@@ -1,4 +1,5 @@
-import {Article} from '../../../objects/article';
+import { Article } from '../../../objects/article';
+
 export interface ArticleApiInterface {
-    onArticleLoaded(article: Article);
+  onArticleLoaded(article: Article);
 }

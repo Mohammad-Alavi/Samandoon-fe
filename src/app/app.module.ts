@@ -30,10 +30,11 @@ import { UnderConstructionPageComponent } from './routes/under-construction-page
     NgbModule.forRoot()
   ],
   providers: [
-      NgoApiService,
-      ArticleApiService,
-      EventApiService
+    NgoApiService,
+    ArticleApiService,
+    EventApiService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
