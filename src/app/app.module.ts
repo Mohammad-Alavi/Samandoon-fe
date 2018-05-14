@@ -32,10 +32,11 @@ import { ArticleViewComponent } from './views/article-view/article-view.componen
     NgbModule.forRoot()
   ],
   providers: [
-      NgoApiService,
-      ArticleApiService,
-      EventApiService
+    NgoApiService,
+    ArticleApiService,
+    EventApiService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

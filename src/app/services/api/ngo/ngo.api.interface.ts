@@ -1,4 +1,5 @@
-import {Ngo} from '../../../objects/ngo';
+import { Ngo } from '../../../objects/ngo';
+
 export interface NgoApiInterface {
-    onNgoLoaded(ngo: Ngo);
+  onNgoLoaded(ngo: Ngo);
 }
