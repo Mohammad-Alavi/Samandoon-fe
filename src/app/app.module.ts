@@ -13,6 +13,7 @@ import { EventApiService } from './services/api/event/event.api.service';
 import { EventPageComponent } from './routes/event-page/event-page.component';
 import { NgoPageComponent } from './routes/ngo-page/ngo-page.component';
 import { UnderConstructionPageComponent } from './routes/under-construction-page/under-construction-page.component';
+import { ArticleViewComponent } from './views/article-view/article-view.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UnderConstructionPageComponent } from './routes/under-construction-page
     ArticlePageComponent,
     EventPageComponent,
     NgoPageComponent,
-    UnderConstructionPageComponent
+    UnderConstructionPageComponent,
+    ArticleViewComponent
   ],
   imports: [
     BrowserModule,
