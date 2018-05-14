@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EventApiService } from './services/api/event/event.api.service';
 import { EventPageComponent } from './routes/event-page/event-page.component';
 import { NgoPageComponent } from './routes/ngo-page/ngo-page.component';
+import { UnderConstructionPageComponent } from './routes/under-construction-page/under-construction-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgoPageComponent } from './routes/ngo-page/ngo-page.component';
     IndexPageComponent,
     ArticlePageComponent,
     EventPageComponent,
-    NgoPageComponent
+    NgoPageComponent,
+    UnderConstructionPageComponent
   ],
   imports: [
     BrowserModule,
