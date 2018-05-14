@@ -1,3 +1,24 @@
-<p>
-  article-view works!
-</p>
+<h1 class="title">UI - Card Design</h1>
+
+<article class="card">
+  <header class="card__thumb">
+    <a href="#"><img src="http://lorempicsum.com/futurama/370/245/3"/></a>
+  </header>
+  <div class="card__date">
+    <span class="card__date__day">26</span>
+    <br/>
+    <span class="card__date__month">شهریور</span>
+  </div>
+
+  <div class="card__body">
+    <div class="card__category"><a href="#">عکس ها</a></div>
+    <h2 class="card__title">نوشته</h2>
+    <div class="card__subtitle">انجمن فلان و بهمان</div>
+    <p class="card__description">{{article.text}}</p>
+  </div>
+
+  <footer class="card__footer">
+    <span class="icon ion-clock"></span> {{article.seen_count}} بازدید
+    <span class="icon ion-chatbox"></span> {{article.comment_count}} نظر
+  </footer>
+</article>
