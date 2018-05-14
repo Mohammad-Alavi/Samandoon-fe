@@ -14,6 +14,8 @@ import { EventPageComponent } from './routes/event-page/event-page.component';
 import { NgoPageComponent } from './routes/ngo-page/ngo-page.component';
 import { UnderConstructionPageComponent } from './routes/under-construction-page/under-construction-page.component';
 import { ArticleViewComponent } from './views/article-view/article-view.component';
+import { NgoViewComponent } from './views/ngo-view/ngo-view.component';
+import { EventViewComponent } from './views/event-view/event-view.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ArticleViewComponent } from './views/article-view/article-view.componen
     EventPageComponent,
     NgoPageComponent,
     UnderConstructionPageComponent,
-    ArticleViewComponent
+    ArticleViewComponent,
+    NgoViewComponent,
+    EventViewComponent
   ],
   imports: [
     BrowserModule,
