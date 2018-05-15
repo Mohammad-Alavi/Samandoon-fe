@@ -1,8 +1,11 @@
+import { Location } from './location';
+
 export class Event {
   id: string;
   title: string;
   image: Images;
   description: string;
+  location: Location;
 }
 
 class Images {
