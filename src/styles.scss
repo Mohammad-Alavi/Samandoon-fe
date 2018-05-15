@@ -10,3 +10,12 @@ body{
   font-family: iran-sans;
   direction: rtl;
 }
+
+// Import any aditional css here and put them into builds/css
+/////////////
+
+// Core partials
+@import "/sass/variables";
+@import "/sass/mixins";
+@import "/sass/base";
+@import "/sass/modules";
