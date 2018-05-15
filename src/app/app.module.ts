@@ -16,6 +16,7 @@ import { UnderConstructionPageComponent } from './routes/under-construction-page
 import { ArticleViewComponent } from './views/article-view/article-view.component';
 import { NgoViewComponent } from './views/ngo-view/ngo-view.component';
 import { EventViewComponent } from './views/event-view/event-view.component';
+import { DatePersianPipe } from './pipes/date-persian.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EventViewComponent } from './views/event-view/event-view.component';
     UnderConstructionPageComponent,
     ArticleViewComponent,
     NgoViewComponent,
-    EventViewComponent
+    EventViewComponent,
+    DatePersianPipe
   ],
   imports: [
     BrowserModule,
