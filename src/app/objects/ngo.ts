@@ -1,4 +1,5 @@
 import { Location } from './location';
+import { Date } from './date';
 
 export class Ngo {
   id: string;
@@ -17,6 +18,8 @@ export class Ngo {
   followers_count: number;
   article_count: number;
   event_count: number;
+  created_at: Date;
+  updated_at: Date;
 }
 
 class Images {

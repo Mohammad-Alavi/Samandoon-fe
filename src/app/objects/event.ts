@@ -1,4 +1,5 @@
 import { Location } from './location';
+import { Date } from './date';
 
 export class Event {
   id: string;
@@ -6,6 +7,9 @@ export class Event {
   image: Images;
   description: string;
   location: Location;
+  event_date: Date;
+  created_at: Date;
+  updated_at: Date;
 }
 
 class Images {

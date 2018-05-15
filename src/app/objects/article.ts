@@ -1,3 +1,5 @@
+import { Date } from './date';
+
 export class Article {
   id: string;
   text: string;
@@ -5,6 +7,8 @@ export class Article {
   like_count: number;
   comment_count: number;
   seen_count: number;
+  created_at: Date;
+  updated_at: Date;
 }
 
 class Images {
