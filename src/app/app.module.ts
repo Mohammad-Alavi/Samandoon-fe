@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './routes/index-page/index-page.component';
@@ -35,7 +36,8 @@ import { DatePersianPipe } from './pipes/date-persian.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [
     NgoApiService,
