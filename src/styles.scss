@@ -4,6 +4,9 @@
 // Import any additional css here and put them into builds/css
 /////////////
 
+// Angular Material prebuilt theme
+@import '~@angular/material/prebuilt-themes/purple-green';
+
 // Core partials
 @import "/sass/variables";
 @import "/sass/mixins";
