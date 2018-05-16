@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { ArticleViewComponent } from './views/article-view/article-view.componen
 import { NgoViewComponent } from './views/ngo-view/ngo-view.component';
 import { EventViewComponent } from './views/event-view/event-view.component';
 import { DatePersianPipe } from './pipes/date-persian.pipe';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { DatePersianPipe } from './pipes/date-persian.pipe';
     AppRoutingModule,
     HttpClientModule,
     NgbModule.forRoot(),
+    MaterialModule,
     BrowserAnimationsModule
   ],
   providers: [
