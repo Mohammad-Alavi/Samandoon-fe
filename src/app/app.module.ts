@@ -20,6 +20,7 @@ import { NgoViewComponent } from './views/ngo-view/ngo-view.component';
 import { EventViewComponent } from './views/event-view/event-view.component';
 import { DatePersianPipe } from './pipes/date-persian.pipe';
 import 'hammerjs';
+import 'hammer-timejs';
 
 @NgModule({
   declarations: [
