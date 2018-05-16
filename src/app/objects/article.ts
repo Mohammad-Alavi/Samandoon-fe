@@ -1,9 +1,11 @@
 import { Date } from './date';
+import { Ngo } from './ngo';
 
 export class Article {
   id: string;
   text: string;
   image: Images;
+  ngo: Ngo;
   like_count: number;
   comment_count: number;
   seen_count: number;
