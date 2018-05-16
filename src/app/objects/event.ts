@@ -1,5 +1,6 @@
 import { Location } from './location';
 import { Date } from './date';
+import { Ngo } from './ngo';
 
 export class Event {
   id: string;
@@ -7,6 +8,7 @@ export class Event {
   image: Images;
   description: string;
   location: Location;
+  ngo: Ngo;
   event_date: Date;
   created_at: Date;
   updated_at: Date;
