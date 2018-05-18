@@ -18,13 +18,22 @@ import { UnderConstructionPageComponent } from './routes/under-construction-page
 import { ArticleViewComponent } from './views/article-view/article-view.component';
 import { NgoViewComponent } from './views/ngo-view/ngo-view.component';
 import { EventViewComponent } from './views/event-view/event-view.component';
-import { DatePersianPipe } from './pipes/date-persian.pipe';
+import { DatePersianPipe } from './pipes/date/date-persian.pipe';
 import 'hammerjs';
 import 'hammer-timejs';
 import { BasePageComponent } from './routes/base-page/base-page.component';
+import { DatePersianDayNamePipe } from './pipes/date/date-persian-day-name.pipe';
+import { DatePersianDayNumberPipe } from './pipes/date/date-persian-day-number.pipe';
+import { DatePersianDayLetterPipe } from './pipes/date/date-persian-day-letter.pipe';
+import { DatePersianMonthNumberPipe } from './pipes/date/date-persian-month-number.pipe';
+import { DatePersianMonthNamePipe } from './pipes/date/date-persian-month-name.pipe';
+import { DatePersianMonthLetterPipe } from './pipes/date/date-persian-month-letter.pipe';
+import { DatePersianYearPipe } from './pipes/date/date-persian-year.pipe';
+import { TimePipe } from './pipes/time/time.pipe';
 
 @NgModule({
   declarations: [
+    //  region Components
     AppComponent,
     IndexPageComponent,
     ArticlePageComponent,
@@ -34,8 +43,19 @@ import { BasePageComponent } from './routes/base-page/base-page.component';
     ArticleViewComponent,
     NgoViewComponent,
     EventViewComponent,
+    BasePageComponent,
+    //  endregion
+    //  region Pipes
     DatePersianPipe,
-    BasePageComponent
+    DatePersianDayNamePipe,
+    DatePersianDayNumberPipe,
+    DatePersianDayLetterPipe,
+    DatePersianMonthNumberPipe,
+    DatePersianMonthNamePipe,
+    DatePersianMonthLetterPipe,
+    DatePersianYearPipe,
+    TimePipe
+    //  endregion
   ],
   imports: [
     BrowserModule,
