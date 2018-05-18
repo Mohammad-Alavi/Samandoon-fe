@@ -33,6 +33,7 @@ import { TimePipe } from './pipes/time/time.pipe';
 
 @NgModule({
   declarations: [
+    //  region Components
     AppComponent,
     IndexPageComponent,
     ArticlePageComponent,
@@ -43,6 +44,8 @@ import { TimePipe } from './pipes/time/time.pipe';
     NgoViewComponent,
     EventViewComponent,
     BasePageComponent,
+    //  endregion
+    //  region Pipes
     DatePersianPipe,
     DatePersianDayNamePipe,
     DatePersianDayNumberPipe,
@@ -52,6 +55,7 @@ import { TimePipe } from './pipes/time/time.pipe';
     DatePersianMonthLetterPipe,
     DatePersianYearPipe,
     TimePipe
+    //  endregion
   ],
   imports: [
     BrowserModule,
