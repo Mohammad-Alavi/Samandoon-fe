@@ -21,6 +21,7 @@ import { EventViewComponent } from './views/event-view/event-view.component';
 import { DatePersianPipe } from './pipes/date-persian.pipe';
 import 'hammerjs';
 import 'hammer-timejs';
+import { BasePageComponent } from './routes/base-page/base-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import 'hammer-timejs';
     ArticleViewComponent,
     NgoViewComponent,
     EventViewComponent,
-    DatePersianPipe
+    DatePersianPipe,
+    BasePageComponent
   ],
   imports: [
     BrowserModule,
