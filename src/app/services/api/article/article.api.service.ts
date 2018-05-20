@@ -14,6 +14,8 @@ export class ArticleApiService extends HttpService {
       const article: Article = object['data']['object'];
       article.ngo = object['data']['ngo']['data']['object'];
       callBack.onApiCallSuccess(article);
+    }, error => {
+      callBack.onApiCallFailure();
     });
   }
 

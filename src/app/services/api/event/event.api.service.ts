@@ -14,6 +14,8 @@ export class EventApiService extends HttpService {
       const event: Event = object['data']['object'];
       event.ngo = object['data']['ngo']['data']['object'];
       callBack.onApiCallSuccess(event);
+    }, error => {
+      callBack.onApiCallFailure();
     });
   }
 
