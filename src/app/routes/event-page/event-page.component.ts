@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { EventApiInterface } from '../../services/api/event/event.api.interface';
 import { Event } from '../../objects/event';
 import { ActivatedRoute } from '@angular/router';
 import { EventApiService } from '../../services/api/event/event.api.service';
@@ -9,7 +8,7 @@ import { EventApiService } from '../../services/api/event/event.api.service';
   templateUrl: './event-page.component.html',
   styleUrls: ['./event-page.component.scss']
 })
-export class EventPageComponent implements OnInit, EventApiInterface {
+export class EventPageComponent implements OnInit, ApiCallGet<Event> {
 
   event: Event;
 
@@ -26,9 +25,12 @@ export class EventPageComponent implements OnInit, EventApiInterface {
     this.eventApiService.getEvent(id, this);
   }
 
-  //  This method is called whenever we call getEvent() and the response arrives
-  onEventLoaded(event: Event) {
-    this.event = event;
+  onApiCallSuccess(obj: Event) {
+    this.event = obj;
   }
+
+  onApiCallFailure() {
+  }
+
 
 }
