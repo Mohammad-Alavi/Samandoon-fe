@@ -7,8 +7,10 @@ import { HttpService } from '../http.service';
 @Injectable()
 export class EventApiService extends HttpService {
 
+  private getEventUrl: string = ApiConfig.API_URL + '/ngo/event/';
+
   getEvent(event_id: string, eventApiInterface: EventApiInterface) {
-    const response = this.http.get(ApiConfig.API_URL + '/ngo/event/' + event_id + '?include=ngo');
+    const response = this.http.get( this.getEventUrl + event_id + '?include=ngo');
     response.subscribe(object => {
       const event: Event = object['data']['object'];
       event.ngo = object['data']['ngo']['data']['object'];
