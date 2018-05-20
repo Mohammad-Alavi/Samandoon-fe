@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ArticleApiService } from '../../services/api/article/article.api.service';
-import { ArticleApiInterface } from '../../services/api/article/article.api.interface';
 import { Article } from '../../objects/article';
+import { ArticleApiService } from '../../services/api/article/article.api.service';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article-page.component.html',
   styleUrls: ['./article-page.component.scss']
 })
-export class ArticlePageComponent implements OnInit, ArticleApiInterface {
+export class ArticlePageComponent implements OnInit, ApiCallGet<Article> {
 
   article: Article;
 
@@ -26,9 +25,11 @@ export class ArticlePageComponent implements OnInit, ArticleApiInterface {
     this.articleApiService.getArticle(id, this);
   }
 
-  //  This method is called whenever we call getArticle() and the response arrives
-  onArticleLoaded(article: Article) {
-    this.article = article;
+  onApiCallSuccess(obj: Article) {
+    this.article = obj;
+  }
+
+  onApiCallFailure() {
   }
 
 }

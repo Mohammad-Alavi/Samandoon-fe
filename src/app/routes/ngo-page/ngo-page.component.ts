@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgoApiInterface } from '../../services/api/ngo/ngo.api.interface';
 import { Ngo } from '../../objects/ngo';
 import { ActivatedRoute } from '@angular/router';
 import { NgoApiService } from '../../services/api/ngo/ngo.api.service';
@@ -9,7 +8,7 @@ import { NgoApiService } from '../../services/api/ngo/ngo.api.service';
   templateUrl: './ngo-page.component.html',
   styleUrls: ['./ngo-page.component.scss']
 })
-export class NgoPageComponent implements OnInit, NgoApiInterface {
+export class NgoPageComponent implements OnInit, ApiCallGet<Ngo> {
 
   ngo: Ngo;
 
@@ -26,9 +25,11 @@ export class NgoPageComponent implements OnInit, NgoApiInterface {
     this.ngoApiService.getNgo(id, this);
   }
 
-  //  This method is called whenever we call getNgo() and the response arrives
-  onNgoLoaded(ngo: Ngo) {
-    this.ngo = ngo;
+  onApiCallSuccess(obj: Ngo) {
+    this.ngo = obj;
+  }
+
+  onApiCallFailure() {
   }
 
 }
