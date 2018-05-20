@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { NgoApiInterface } from './ngo.api.interface';
 import { ApiConfig } from '../api.config';
+import { HttpService } from '../http.service';
 
 @Injectable()
-export class NgoApiService {
-  constructor(private http: HttpClient) {
-  }
+export class NgoApiService extends HttpService {
 
   getNgo(ngo_id: string, ngoApiInterface: NgoApiInterface) {
     const response = this.http.get(ApiConfig.API_URL + '/ngo/' + ngo_id);
