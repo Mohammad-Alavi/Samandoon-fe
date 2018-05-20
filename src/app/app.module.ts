@@ -21,7 +21,7 @@ import { EventViewComponent } from './views/event-view/event-view.component';
 import { DatePersianPipe } from './pipes/date/date-persian.pipe';
 import 'hammerjs';
 import 'hammer-timejs';
-import { BasePageComponent } from './routes/base-page/base-page.component';
+import { BasePageComponent } from './views/base-page/base-page.component';
 import { DatePersianDayNamePipe } from './pipes/date/date-persian-day-name.pipe';
 import { DatePersianDayNumberPipe } from './pipes/date/date-persian-day-number.pipe';
 import { DatePersianDayLetterPipe } from './pipes/date/date-persian-day-letter.pipe';
