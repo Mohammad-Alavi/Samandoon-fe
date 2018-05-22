@@ -31,6 +31,7 @@ import { DatePersianMonthLetterPipe } from './pipes/date/date-persian-month-lett
 import { DatePersianYearPipe } from './pipes/date/date-persian-year.pipe';
 import { TimePipe } from './pipes/time/time.pipe';
 import { ArticleListViewComponent } from './views/article-list-view/article-list-view.component';
+import { EventListViewComponent } from './views/event-list-view/event-list-view.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { ArticleListViewComponent } from './views/article-list-view/article-list
     DatePersianMonthLetterPipe,
     DatePersianYearPipe,
     TimePipe,
+    EventListViewComponent,
     //  endregion
   ],
   imports: [

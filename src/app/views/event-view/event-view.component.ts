@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Event } from '../../objects/event';
 
 @Component({
   selector: 'app-event-view',
