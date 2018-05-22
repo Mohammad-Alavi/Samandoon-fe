@@ -9,15 +9,15 @@ import { ArticleApiService } from '../../services/api/article/article.api.servic
   styleUrls: ['./article-list-view.component.scss']
 })
 export class ArticleListViewComponent implements OnInit, ApiCallGetAll<Article> {
-  private _ngo_id: string;
+  private _ngo: Ngo;
 
   @Input()
-    set ngo_id(ngo_id: string) {
-    this._ngo_id = ngo_id;
+    set ngo(ngo: Ngo) {
+    this._ngo = ngo;
     this.getArticleList(1);
   }
-  get ngo_id() {
-    return this._ngo_id;
+  get ngo() {
+    return this._ngo;
   }
   articleList: Article[] = Array();
 
@@ -28,7 +28,7 @@ export class ArticleListViewComponent implements OnInit, ApiCallGetAll<Article> 
   }
 
   getArticleList(page: number) {
-    this.articleApiService.getArticleList(this._ngo_id, page, this);
+    this.articleApiService.getArticleList(this.ngo.id, page, this);
   }
 
   onApiCallSuccess(objList: Article[], currentPage: number, totalPage: number) {
