@@ -1,12 +1,21 @@
 // _base.scss
 // ==========
 
-//@font-face {
-//    font-family: 'iran-sans';
-//    src: url('../assets/fonts/iransans.ttf') format("ttf");
-//}
-
 body{
+    margin: 0;
+    padding: 0;
     font-family: 'IRANSans', 'Roboto', sans-serif;;
     direction: rtl;
+}
+
+.box-shadow {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2);
+    transition: box-shadow 83ms;
+}
+
+.core-rail {
+    box-sizing: border-box;
+    float: right;
+    margin-left: -1px;
+    width: calc((576px * .5) + 264px);
 }
