@@ -22,6 +22,7 @@ import { DatePersianPipe } from './pipes/date/date-persian.pipe';
 import 'hammerjs';
 import 'hammer-timejs';
 import { BasePageComponent } from './views/base-page/base-page.component';
+import { MainTopNavComponent } from './views/main-top-nav/main-top-nav.component';
 import { DatePersianDayNamePipe } from './pipes/date/date-persian-day-name.pipe';
 import { DatePersianDayNumberPipe } from './pipes/date/date-persian-day-number.pipe';
 import { DatePersianDayLetterPipe } from './pipes/date/date-persian-day-letter.pipe';
@@ -45,6 +46,7 @@ import { ArticleListViewComponent } from './views/article-list-view/article-list
     NgoViewComponent,
     EventViewComponent,
     BasePageComponent,
+    MainTopNavComponent,
     ArticleListViewComponent,
 
     //  endregion
