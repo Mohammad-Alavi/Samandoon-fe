@@ -10,6 +10,7 @@ import { NgoApiService } from '../../services/api/ngo/ngo.api.service';
 })
 export class NgoPageComponent implements OnInit, ApiCallGet<Ngo> {
 
+  ngo_id;
   ngo: Ngo;
 
   constructor(private route: ActivatedRoute,
@@ -21,8 +22,8 @@ export class NgoPageComponent implements OnInit, ApiCallGet<Ngo> {
   }
 
   getNgo() {
-    const id = this.route.snapshot.paramMap.get('ngo_id');
-    this.ngoApiService.getNgo(id, this);
+    this.ngo_id = this.route.snapshot.paramMap.get('ngo_id');
+    this.ngoApiService.getNgo(this.ngo_id, this);
   }
 
   onApiCallSuccess(obj: Ngo) {
