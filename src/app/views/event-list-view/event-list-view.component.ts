@@ -1,41 +1,34 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Ngo } from '../../objects/ngo';
 import { Event } from '../../objects/event';
 import { EventApiService } from '../../services/api/event/event.api.service';
+import { List } from '../List';
 
 @Component({
   selector: 'app-event-list-view',
   templateUrl: './event-list-view.component.html',
   styleUrls: ['./event-list-view.component.scss']
 })
-export class EventListViewComponent implements OnInit, ApiCallGetAll<Event> {
+export class EventListViewComponent extends List<Event> {
   private _ngo: Ngo;
 
   @Input()
   set ngo(ngo: Ngo) {
     this._ngo = ngo;
-    this.getEventList(1);
+    this.loadMore();
   }
+
   get ngo() {
     return this._ngo;
   }
-  eventList: Event[] = Array();
-  constructor(private eventApiService: EventApiService) { }
 
-  ngOnInit() {
+  constructor(private eventApiService: EventApiService) {
+    super();
   }
 
-  getEventList(page: number) {
-    this.eventApiService.getEventList(this.ngo.id, page, this);
-  }
-
-  onApiCallSuccess(objList: Event[], currentPage: number, totalPage: number) {
-    objList.forEach((event) => {
-      this.eventList.push(event);
-    });
-  }
-
-  onApiCallFailure() {
+  public loadMore() {
+    this.isLoading = true;
+    this.eventApiService.getEventList(this.ngo.id, this.page, this);
   }
 
 }
