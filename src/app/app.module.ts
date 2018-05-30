@@ -32,9 +32,21 @@ import { DatePersianYearPipe } from './pipes/date/date-persian-year.pipe';
 import { TimePipe } from './pipes/time/time.pipe';
 import { ArticleListViewComponent } from './views/article-list-view/article-list-view.component';
 import { EventListViewComponent } from './views/event-list-view/event-list-view.component';
+import { PaginationLoadMoreComponent } from './views/pagination-load-more/pagination-load-more.component';
 
 @NgModule({
   declarations: [
+    //  region Pipes
+    DatePersianPipe,
+    DatePersianDayNamePipe,
+    DatePersianDayNumberPipe,
+    DatePersianDayLetterPipe,
+    DatePersianMonthNumberPipe,
+    DatePersianMonthNamePipe,
+    DatePersianMonthLetterPipe,
+    DatePersianYearPipe,
+    TimePipe,
+    //  endregion
     //  region Components
     AppComponent,
     IndexPageComponent,
@@ -47,19 +59,8 @@ import { EventListViewComponent } from './views/event-list-view/event-list-view.
     EventViewComponent,
     BasePageComponent,
     ArticleListViewComponent,
-
-    //  endregion
-    //  region Pipes
-    DatePersianPipe,
-    DatePersianDayNamePipe,
-    DatePersianDayNumberPipe,
-    DatePersianDayLetterPipe,
-    DatePersianMonthNumberPipe,
-    DatePersianMonthNamePipe,
-    DatePersianMonthLetterPipe,
-    DatePersianYearPipe,
-    TimePipe,
     EventListViewComponent,
+    PaginationLoadMoreComponent,
     //  endregion
   ],
   imports: [
