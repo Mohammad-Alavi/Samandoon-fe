@@ -2,22 +2,23 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Ngo } from '../../objects/ngo';
 import { Article } from '../../objects/article';
 import { ArticleApiService } from '../../services/api/article/article.api.service';
+import { Pageable } from '../Pageable';
 
 @Component({
   selector: 'app-article-list-view',
   templateUrl: './article-list-view.component.html',
   styleUrls: ['./article-list-view.component.scss']
 })
-export class ArticleListViewComponent implements OnInit, ApiCallGetAll<Article> {
+export class ArticleListViewComponent implements OnInit, ApiCallGetAll<Article>, Pageable {
   private _ngo: Ngo;
-  private page = 1;
+  public page = 1;
   public isEnded = false;
   public isLoading = false;
 
   @Input()
   set ngo(ngo: Ngo) {
     this._ngo = ngo;
-    this.getArticleList();
+    this.loadMore();
   }
 
   get ngo() {
@@ -32,13 +33,9 @@ export class ArticleListViewComponent implements OnInit, ApiCallGetAll<Article> 
   ngOnInit() {
   }
 
-  private getArticleList() {
+  public loadMore() {
     this.isLoading = true;
     this.articleApiService.getArticleList(this.ngo.id, this.page, this);
-  }
-
-  public loadMore() {
-    if (!this.isEnded && !this.isLoading) { this.getArticleList(); }
   }
 
   onApiCallSuccess(objList: Article[], currentPage: number, totalPage: number) {

@@ -3,10 +3,9 @@
     <app-article-view [article]="article"></app-article-view>
   </div>
 
-  <button *ngIf="!isEnded" ngClass="btn btn-block" (click)="loadMore()">
-    <i *ngIf="isLoading" class="fas fa-circle-notch fa-spin"></i>
-    <a *ngIf="isLoading">در حال دریافت ...</a>
-    <i *ngIf="!isLoading" class="fas fa-road"></i>
-    <a *ngIf="!isLoading">بیشتر</a>
-  </button>
+  <app-pagination-load-more
+    [isEnded]="isEnded"
+    [isLoading]="isLoading"
+    [pageable]="this">
+  </app-pagination-load-more>
 </div>
