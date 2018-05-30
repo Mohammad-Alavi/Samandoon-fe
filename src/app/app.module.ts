@@ -33,6 +33,7 @@ import { TimePipe } from './pipes/time/time.pipe';
 import { ArticleListViewComponent } from './views/article-list-view/article-list-view.component';
 import { EventListViewComponent } from './views/event-list-view/event-list-view.component';
 import { PaginationLoadMoreComponent } from './views/pagination-load-more/pagination-load-more.component';
+import { NgoListViewComponent } from './views/ngo-list-view/ngo-list-view.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { PaginationLoadMoreComponent } from './views/pagination-load-more/pagina
     ArticleListViewComponent,
     EventListViewComponent,
     PaginationLoadMoreComponent,
+    NgoListViewComponent,
     //  endregion
   ],
   imports: [
