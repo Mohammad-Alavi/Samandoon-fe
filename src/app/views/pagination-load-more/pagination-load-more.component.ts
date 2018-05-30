@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Pageable } from '../Pageable';
 
 @Component({
@@ -6,16 +6,13 @@ import { Pageable } from '../Pageable';
   templateUrl: './pagination-load-more.component.html',
   styleUrls: ['./pagination-load-more.component.scss']
 })
-export class PaginationLoadMoreComponent implements OnInit {
+export class PaginationLoadMoreComponent {
 
   @Input() public isEnded = false;
   @Input() public isLoading = false;
   @Input() public pageable: Pageable;
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
   loadMore() {
