@@ -10,15 +10,20 @@ import { ArticleApiService } from '../../services/api/article/article.api.servic
 })
 export class ArticleListViewComponent implements OnInit, ApiCallGetAll<Article> {
   private _ngo: Ngo;
+  private page = 1;
+  public isEnded = false;
+  public isLoading = false;
 
   @Input()
-    set ngo(ngo: Ngo) {
+  set ngo(ngo: Ngo) {
     this._ngo = ngo;
-    this.getArticleList(1);
+    this.getArticleList();
   }
+
   get ngo() {
     return this._ngo;
   }
+
   articleList: Article[] = Array();
 
   constructor(private articleApiService: ArticleApiService) {
@@ -27,17 +32,24 @@ export class ArticleListViewComponent implements OnInit, ApiCallGetAll<Article> 
   ngOnInit() {
   }
 
-  getArticleList(page: number) {
-    this.articleApiService.getArticleList(this.ngo.id, page, this);
+  private getArticleList() {
+    this.isLoading = true;
+    this.articleApiService.getArticleList(this.ngo.id, this.page, this);
+  }
+
+  public loadMore() {
+    if (!this.isEnded && !this.isLoading) { this.getArticleList(); }
   }
 
   onApiCallSuccess(objList: Article[], currentPage: number, totalPage: number) {
-    objList.forEach((article) => {
-      this.articleList.push(article);
-    });
+    objList.forEach((article) => this.articleList.push(article));
+    this.page++;
+    this.isEnded = currentPage >= totalPage;
+    this.isLoading = false;
   }
 
   onApiCallFailure() {
+    this.isLoading = false;
   }
 
 }
