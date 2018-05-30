@@ -1,0 +1,11 @@
+<div style="width: 40em">
+  <div *ngFor="let ngo of list">
+    <app-ngo-view [ngo]="ngo"></app-ngo-view>
+  </div>
+
+  <app-pagination-load-more
+    [isEnded]="isEnded"
+    [isLoading]="isLoading"
+    [pageable]="this">
+  </app-pagination-load-more>
+</div>
