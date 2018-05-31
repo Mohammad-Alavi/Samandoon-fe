@@ -81,7 +81,8 @@ import { CommentApiService } from './services/api/comment/comment.api.service';
   providers: [
     NgoApiService,
     ArticleApiService,
-    EventApiService
+    EventApiService,
+    CommentApiService
   ],
   bootstrap: [AppComponent]
 })
