@@ -1,0 +1,11 @@
+<div style="width: 40em">
+  <div *ngFor="let comment of list">
+    <app-comment-view [comment]="comment"></app-comment-view>
+  </div>
+
+  <app-pagination-load-more
+    [isEnded]="isEnded"
+    [isLoading]="isLoading"
+    [pageable]="this">
+  </app-pagination-load-more>
+</div>
