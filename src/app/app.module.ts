@@ -34,6 +34,9 @@ import { ArticleListViewComponent } from './views/article-list-view/article-list
 import { EventListViewComponent } from './views/event-list-view/event-list-view.component';
 import { PaginationLoadMoreComponent } from './views/pagination-load-more/pagination-load-more.component';
 import { NgoListViewComponent } from './views/ngo-list-view/ngo-list-view.component';
+import { CommentViewComponent } from './views/comment-view/comment-view.component';
+import { CommentListViewComponent } from './views/comment-list-view/comment-list-view.component';
+import { CommentApiService } from './services/api/comment/comment.api.service';
 
 @NgModule({
   declarations: [
@@ -63,6 +66,8 @@ import { NgoListViewComponent } from './views/ngo-list-view/ngo-list-view.compon
     EventListViewComponent,
     PaginationLoadMoreComponent,
     NgoListViewComponent,
+    CommentViewComponent,
+    CommentListViewComponent,
     //  endregion
   ],
   imports: [
