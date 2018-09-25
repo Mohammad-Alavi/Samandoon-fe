@@ -1,10 +1,19 @@
 // _base.scss
 // ==========
 
+* {
+    font-family: 'IRANSansWebFaNum', 'Roboto', sans-serif;
+}
 body{
     margin: 0;
     padding: 0;
-    font-family: 'IRANSans', 'Roboto', sans-serif;;
+    font-size: 1rem;
+    background-color: $main-bg-color;
+    p {
+        margin: 0.8rem;
+        margin-top: 0;
+        text-align: right;
+    }
 }
 
 .box-shadow {

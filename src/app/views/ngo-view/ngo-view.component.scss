@@ -1,0 +1,87 @@
+@import '../../../sass/variables';
+
+.mat-card#ngo-main {
+  font-family: inherit;
+  text-align: center;
+  //width: 216px;
+  height: auto;
+  //height: 436px;
+  padding: 0px;
+  margin: 0px auto;
+  .profile-background-image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 25%;
+    background: cover/center;
+  }
+
+  .card-bg-image {
+    height: 54px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .mat-card-avatar {
+    border: 3px solid $white;
+    box-sizing: content-box;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+    margin-top: -40px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 72px;
+    height: 72px;
+    background-clip: content-box;
+  }
+
+  .mat-card-title {
+    margin-top: 8px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .mat-card-subtitle {
+    margin-bottom: 4px;
+    margin-left: 4px;
+    line-height: 20px;
+    font-size: 10px;
+    font-weight: 400;
+    float: right;
+  }
+  .card-info {
+    padding: 0 24px 16px;
+  }
+
+  .mat-chip-list {
+    .mat-chip {
+      margin: 5px auto;
+      font-size: 8px;
+    }
+  }
+
+  .description {
+    font-size: 9px;
+  }
+
+  /deep/ .mat-card-header-text {
+    display: none;
+  }
+
+  .mat-card-footer {
+    border-top: 1px solid rgba(0, 0, 0, .15);
+    //padding: 12px 24px;
+    margin: auto;
+    p {
+      margin: 0px;
+      font-size: 14px;
+    }
+    #address {
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.social-counts {
+  color: $darkgray;
+}

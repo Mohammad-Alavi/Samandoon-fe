@@ -1,0 +1,89 @@
+@import "../../../sass/variables";
+.wrapper {
+  width: 1128px;
+  box-sizing: content-box;
+  padding: 0 32px;
+  display: block;
+  margin: 24px auto auto;
+  position: relative;
+}
+
+.right-rail.ngo-view{
+  width: calc((576px * .20833) + 96px);
+  height: auto;
+  margin-bottom: 24px;
+  margin-left: calc((576px * 0) - 24px + 49px);
+  box-sizing: border-box;
+  float: left;
+  margin-right: -1px;
+  padding: 0px;
+  //opacity: 0;
+  //animation: fade-in 330ms ease forwards;
+}
+
+.core-rail {
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  margin-right: -1px;
+  width: calc((576px * .5) + 264px);
+  margin-bottom: 24px;
+  margin-left: calc((576px * 0) - 24px + 49px);
+  animation-delay: 84ms;
+  padding: 0px;
+  text-align: right;
+  //opacity: 0;
+  //animation: fade-in 330ms ease forwards;
+}
+
+.left-rail {
+  position: relative;
+  width: calc((576px * .29167) + 144px);
+  box-sizing: border-box;
+  float: left;
+  margin: 0 -1px 24px calc((576px * 0) - 24px + 24px);
+  padding: 0px;
+  //opacity: 0;
+  //animation: fade-in 330ms ease forwards;
+}
+
+.activity-tab-select {
+  background-color: $white;
+  border-radius: 2px;
+  padding: 16px 16px 0;
+}
+
+.activity-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.activity-box-divider {
+  min-height: 10px;
+  width: 100%;
+  background-color: $main-bg-color;
+}
+
+/deep/ .mat-tab-group {
+  //width: 500px;
+}
+
+/deep/ .mat-tab-header {
+  border-radius: 2px;
+  padding: 16px 16px 0;
+  background-color: $white !important;
+  background-clip: padding-box !important;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2) !important;
+  transition: box-shadow 83ms !important;
+}
+
+.left-col {
+}
+
+.mid-col {
+  padding: 0px 0px 0px 15px;
+}
+
+.right-col {
+  padding: 0px 0px 0px 15px;
+}

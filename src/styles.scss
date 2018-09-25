@@ -1,18 +1,26 @@
+// Angular Material prebuilt theme
+@import '~@angular/material/prebuilt-themes/deeppurple-amber';
+
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/scss/bootstrap";
 
 // Import any additional css here and put them into builds/css
 /////////////
 
+// Import Angular timeline
+@import "~angular-timeline/dist/angular-timeline.css";
 
 //
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
-// Angular Material prebuilt theme
-@import '~@angular/material/prebuilt-themes/purple-green';
 
 // Core partials
 @import "/sass/variables";
 @import "/sass/mixins";
 @import "/sass/base";
 @import "/sass/modules";
+
+//// Custom theming typography
+//@import '~@angular/material/theming';
+//
+//$custom-typography: mat-typography-config($font-family: 'IRANSansWebFaNum_Medium');
+//@include mat-core($custom-typography);

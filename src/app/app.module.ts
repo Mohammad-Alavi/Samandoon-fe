@@ -34,6 +34,9 @@ import { TimePipe } from './pipes/time/time.pipe';
 import { ArticleListViewComponent } from './views/article-list-view/article-list-view.component';
 import { EventListViewComponent } from './views/event-list-view/event-list-view.component';
 
+import { EllipsisModule } from 'ngx-ellipsis';
+
+
 @NgModule({
   declarations: [
     //  region Components
@@ -70,7 +73,8 @@ import { EventListViewComponent } from './views/event-list-view/event-list-view.
     HttpClientModule,
     NgbModule.forRoot(),
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    EllipsisModule
   ],
   providers: [
     NgoApiService,
