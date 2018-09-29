@@ -3,6 +3,7 @@ import { Ngo } from './ngo';
 
 export class Article {
   id: string;
+  title: string;
   text: string;
   image: Images;
   ngo: Ngo;
