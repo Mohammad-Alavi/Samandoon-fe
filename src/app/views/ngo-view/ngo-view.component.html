@@ -1,4 +1,36 @@
-<p>
-  name: {{ngo.name}}
-</p>
-<hr/>
+<mat-card id="ngo-main">
+
+    <div class="card-bg-image" [style.background-image]="'url(' + ngo.images.ngo_banner_thumb + ')'"></div>
+
+    <mat-card-header>
+      <a mat-card-avatar href="#" [style.background-image]="'url(' + ngo.images.ngo_logo_thumb + ')'"></a>
+    </mat-card-header> <!-- card header -->
+
+  <mat-card-content>
+    <div class="card-info">
+      <mat-card-title>{{ ngo.name }}</mat-card-title>
+      <mat-chip-list>
+        <mat-chip *ngFor="let subject of ngo.subject" selected [color]="primary">{{ subject.subject }}</mat-chip>
+      </mat-chip-list>
+      <!--<mat-card-subtitle *ngFor="let subject of ngo.subject">{{ subject.subject }}</mat-card-subtitle>-->
+    </div>
+    <div>محدوده فعالیت: {{ ngo.area_of_activity }}</div>
+    <div>وضعیت: {{ ngo.status }}</div>
+
+  </mat-card-content>
+
+  <mat-card-footer>
+  <mat-expansion-panel id="address" dir="rtl">
+    <mat-expansion-panel-header>
+      <mat-panel-title>آدرس</mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>استان {{ ngo.location.province }}</div>
+    <div>شهرستان {{ ngo.location.city }}</div>
+    <div>{{ ngo.location.address }}</div>
+  </mat-expansion-panel>
+  </mat-card-footer>
+
+</mat-card>  <!-- card -->
+  <!--<div class="card-info"></div>-->
+  <!--<div class="card-profile-image"></div>-->
+  <!--<div class="extra-info"></div>-->
