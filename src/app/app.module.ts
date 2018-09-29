@@ -22,6 +22,7 @@ import { DatePersianPipe } from './pipes/date/date-persian.pipe';
 import 'hammerjs';
 import 'hammer-timejs';
 import { BasePageComponent } from './views/base-page/base-page.component';
+import { MainTopNavComponent } from './views/main-top-nav/main-top-nav.component';
 import { DatePersianDayNamePipe } from './pipes/date/date-persian-day-name.pipe';
 import { DatePersianDayNumberPipe } from './pipes/date/date-persian-day-number.pipe';
 import { DatePersianDayLetterPipe } from './pipes/date/date-persian-day-letter.pipe';
@@ -37,6 +38,9 @@ import { NgoListViewComponent } from './views/ngo-list-view/ngo-list-view.compon
 import { CommentViewComponent } from './views/comment-view/comment-view.component';
 import { CommentListViewComponent } from './views/comment-list-view/comment-list-view.component';
 import { CommentApiService } from './services/api/comment/comment.api.service';
+
+import { EllipsisModule } from 'ngx-ellipsis';
+
 
 @NgModule({
   declarations: [
@@ -62,6 +66,7 @@ import { CommentApiService } from './services/api/comment/comment.api.service';
     NgoViewComponent,
     EventViewComponent,
     BasePageComponent,
+    MainTopNavComponent,
     ArticleListViewComponent,
     EventListViewComponent,
     PaginationLoadMoreComponent,
@@ -76,7 +81,8 @@ import { CommentApiService } from './services/api/comment/comment.api.service';
     HttpClientModule,
     NgbModule.forRoot(),
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    EllipsisModule
   ],
   providers: [
     NgoApiService,

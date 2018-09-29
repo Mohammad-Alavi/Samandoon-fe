@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Ngo } from '../../objects/ngo';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { NgoApiService } from '../../services/api/ngo/ngo.api.service';
+// import {Direction, Directionality} from '@angular/cdk/bidi';
 
 @Component({
   selector: 'app-ngo-page',
@@ -9,16 +10,18 @@ import { NgoApiService } from '../../services/api/ngo/ngo.api.service';
   styleUrls: ['./ngo-page.component.scss']
 })
 export class NgoPageComponent implements OnInit, ApiCallGet<Ngo> {
-
   ngo: Ngo;
 
-  constructor(private route: ActivatedRoute,
-              private ngoApiService: NgoApiService) {
-  }
-
-  ngOnInit() {
+  ngOnInit(): void {
     this.getNgo();
   }
+
+  // private dir: Direction;
+
+  constructor(private route: ActivatedRoute,
+              private ngoApiService: NgoApiService,
+              // private router: Router
+    ) {}
 
   getNgo() {
     const ngo_public_name = this.route.snapshot.paramMap.get('ngo_public_name');
@@ -32,4 +35,8 @@ export class NgoPageComponent implements OnInit, ApiCallGet<Ngo> {
   onApiCallFailure() {
   }
 
+  // @HostListener('moreClicked')
+  // moreClicked() {
+  //   this.router.navigateByUrl('/article');
+  // }
 }

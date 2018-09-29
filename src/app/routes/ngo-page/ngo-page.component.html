@@ -1,25 +1,31 @@
 <app-base-page>
+  <div class="container">
+    <div class="row">
 
-  <h1>
-    THIS IS A TEST TO SEE IF <strong>NGO</strong> WORKS.
-    <br>
-    <br>
-    <br>
-  </h1>
+      <!--<aside class="col-3 left-col border">-->
+      <!--&lt;!&ndash;<aside class="col-3 left-rail border">&ndash;&gt;-->
+      <!--</aside> &lt;!&ndash; LEFT COL &ndash;&gt;-->
 
-  <strong>
-    ngo id: {{ngo.id}}
-  </strong>
-  <p>
-    {{ngo.name}}
-  </p>
-  <p>
-    {{ngo.description}}
-  </p>
+      <div class="col-7 mid-col offset-1" dir="rtl">
+      <!--<div class="col-5 core-rail" dir="rtl">-->
+        <mat-tab-group>
+          <mat-tab label="نوشته ها">
+            <div class="activity-box-divider"></div>
+          <app-article-list-view [ngo]="ngo"></app-article-list-view>
+          </mat-tab>
+          <mat-tab label="رخداد ها">
+            <div class="activity-box-divider"></div>
+            <app-event-list-view [ngo]="ngo"></app-event-list-view>
+          </mat-tab>
+        </mat-tab-group>
+      </div> <!-- CENTER COL -->
 
-  <h1>
-    This is Article List:
-  </h1>
-  <app-article-list-view [ngo]="ngo"></app-article-list-view>
+      <aside class="col-3 right-col">
+      <!--<aside class="flex-column w-auto">-->
+        <app-ngo-view [ngo]="ngo"></app-ngo-view>
+      </aside> <!-- RIGHT COL -->
 
+    </div> <!-- ROW -->
+  </div>
 </app-base-page>
+

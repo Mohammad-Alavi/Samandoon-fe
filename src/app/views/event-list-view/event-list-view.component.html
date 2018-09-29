@@ -1,13 +1,4 @@
-<div style="width: 40em">
-
-  <div *ngFor="let event of list">
-    <app-event-view [event]="event"></app-event-view>
-  </div>
-
-  <app-pagination-load-more
-    [isEnded]="isEnded"
-    [isLoading]="isLoading"
-    [pageable]="this">
-  </app-pagination-load-more>
-
+<div *ngFor="let event of eventList">
+  <app-event-view [event]="event"></app-event-view>
 </div>
+
