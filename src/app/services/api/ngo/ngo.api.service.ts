@@ -6,10 +6,10 @@ import { Ngo } from '../../../objects/ngo';
 @Injectable()
 export class NgoApiService extends HttpService {
 
-  private getNgoUrl: string = ApiConfig.API_URL + '/ngo';
+  private getNgoUrl: string = ApiConfig.API_URL + '/ngo/name';
 
-  getNgo(ngo_id: string, callBack: ApiCallGet<Ngo>) {
-    const response = this.http.get(this.getNgoUrl + '/' + ngo_id);
+  getNgo(ngo_public_name: string, callBack: ApiCallGet<Ngo>) {
+    const response = this.http.get(this.getNgoUrl + '/' + ngo_public_name);
     response.subscribe(object => {
       callBack.onApiCallSuccess(object['data']['object']);
     }, error => {

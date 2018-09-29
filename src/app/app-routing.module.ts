@@ -8,7 +8,7 @@ import { NgoPageComponent } from './routes/ngo-page/ngo-page.component';
 
 const routes: Route[] = [
   {path: '', component: IndexPageComponent},
-  {path: 'ngo/:ngo_id', component: NgoPageComponent},
+  {path: ':ngo_public_name', component: NgoPageComponent},
   {path: 'article/:article_id', component: ArticlePageComponent},
   {path: 'event/:event_id', component: EventPageComponent}
 ];
