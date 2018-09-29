@@ -33,12 +33,28 @@ import { DatePersianYearPipe } from './pipes/date/date-persian-year.pipe';
 import { TimePipe } from './pipes/time/time.pipe';
 import { ArticleListViewComponent } from './views/article-list-view/article-list-view.component';
 import { EventListViewComponent } from './views/event-list-view/event-list-view.component';
+import { PaginationLoadMoreComponent } from './views/pagination-load-more/pagination-load-more.component';
+import { NgoListViewComponent } from './views/ngo-list-view/ngo-list-view.component';
+import { CommentViewComponent } from './views/comment-view/comment-view.component';
+import { CommentListViewComponent } from './views/comment-list-view/comment-list-view.component';
+import { CommentApiService } from './services/api/comment/comment.api.service';
 
 import { EllipsisModule } from 'ngx-ellipsis';
 
 
 @NgModule({
   declarations: [
+    //  region Pipes
+    DatePersianPipe,
+    DatePersianDayNamePipe,
+    DatePersianDayNumberPipe,
+    DatePersianDayLetterPipe,
+    DatePersianMonthNumberPipe,
+    DatePersianMonthNamePipe,
+    DatePersianMonthLetterPipe,
+    DatePersianYearPipe,
+    TimePipe,
+    //  endregion
     //  region Components
     AppComponent,
     IndexPageComponent,
@@ -52,19 +68,11 @@ import { EllipsisModule } from 'ngx-ellipsis';
     BasePageComponent,
     MainTopNavComponent,
     ArticleListViewComponent,
-
-    //  endregion
-    //  region Pipes
-    DatePersianPipe,
-    DatePersianDayNamePipe,
-    DatePersianDayNumberPipe,
-    DatePersianDayLetterPipe,
-    DatePersianMonthNumberPipe,
-    DatePersianMonthNamePipe,
-    DatePersianMonthLetterPipe,
-    DatePersianYearPipe,
-    TimePipe,
     EventListViewComponent,
+    PaginationLoadMoreComponent,
+    NgoListViewComponent,
+    CommentViewComponent,
+    CommentListViewComponent,
     //  endregion
   ],
   imports: [
@@ -79,7 +87,8 @@ import { EllipsisModule } from 'ngx-ellipsis';
   providers: [
     NgoApiService,
     ArticleApiService,
-    EventApiService
+    EventApiService,
+    CommentApiService
   ],
   bootstrap: [AppComponent]
 })
