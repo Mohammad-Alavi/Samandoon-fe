@@ -40,6 +40,7 @@ import { CommentListViewComponent } from './views/comment-list-view/comment-list
 import { CommentApiService } from './services/api/comment/comment.api.service';
 
 import { EllipsisModule } from 'ngx-ellipsis';
+import { MatIconModule, MatIconRegistry } from '@angular/material';
 
 
 @NgModule({
@@ -82,7 +83,8 @@ import { EllipsisModule } from 'ngx-ellipsis';
     NgbModule.forRoot(),
     MaterialModule,
     BrowserAnimationsModule,
-    EllipsisModule
+    EllipsisModule,
+    MatIconModule
   ],
   providers: [
     NgoApiService,
@@ -93,4 +95,7 @@ import { EllipsisModule } from 'ngx-ellipsis';
   bootstrap: [AppComponent]
 })
 export class AppModule {
+  constructor(matIconRegistry: MatIconRegistry) {
+    matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
+  }
 }

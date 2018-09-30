@@ -19,6 +19,11 @@
 @import "/sass/base";
 @import "/sass/modules";
 
+//  Font Awesome references
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
+
 //// Custom theming typography
 //@import '~@angular/material/theming';
 //
