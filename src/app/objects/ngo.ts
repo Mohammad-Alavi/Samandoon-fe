@@ -4,6 +4,7 @@ import { Date } from './date';
 export class Ngo {
   id: string;
   name: string;
+  public_name: string;
   description: string;
   location: Location;
   images: Images;
