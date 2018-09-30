@@ -95,7 +95,4 @@ import { MatIconModule, MatIconRegistry } from '@angular/material';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(matIconRegistry: MatIconRegistry) {
-    matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
-  }
 }

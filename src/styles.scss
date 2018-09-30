@@ -10,18 +10,14 @@
 // Import Angular timeline
 @import "~angular-timeline/dist/angular-timeline.css";
 
-//
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
 // Core partials
 @import "/sass/variables";
 @import "/sass/mixins";
 @import "/sass/base";
 @import "/sass/modules";
 
-//  Font Awesome references
-$fa-font-path: "../node_modules/font-awesome/fonts";
-@import '~font-awesome/scss/font-awesome.scss';
+//  Material Icons Reference
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 
 //// Custom theming typography
