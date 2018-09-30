@@ -38,7 +38,7 @@ class RegistrationSpecification {
 
 class Subject {
   id: number;
-  subject: string;
+  title: string;
 }
 
 class Phone {

@@ -10,9 +10,9 @@
     <div class="card-info">
       <mat-card-title>{{ ngo.name }}</mat-card-title>
       <mat-chip-list>
-        <mat-chip *ngFor="let subject of ngo.subject" selected [color]="primary">{{ subject.subject }}</mat-chip>
+        <mat-chip *ngFor="let subject of ngo.subject" selected [color]="primary">{{ subject.title }}</mat-chip>
       </mat-chip-list>
-      <!--<mat-card-subtitle *ngFor="let subject of ngo.subject">{{ subject.subject }}</mat-card-subtitle>-->
+      <!--<mat-card-subtitle *ngFor="let title of ngo.title">{{ title.title }}</mat-card-subtitle>-->
     </div>
     <div>محدوده فعالیت: {{ ngo.area_of_activity }}</div>
     <div>وضعیت: {{ ngo.status }}</div>
