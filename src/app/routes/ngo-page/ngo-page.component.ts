@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Ngo } from '../../objects/ngo';
-import {ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgoApiService } from '../../services/api/ngo/ngo.api.service';
+
 // import {Direction, Directionality} from '@angular/cdk/bidi';
 
 @Component({
@@ -21,7 +22,7 @@ export class NgoPageComponent implements OnInit, ApiCallGet<Ngo> {
   constructor(private route: ActivatedRoute,
               private ngoApiService: NgoApiService,
               // private router: Router
-    ) {}
+  ) {}
 
   getNgo() {
     const ngo_public_name = this.route.snapshot.paramMap.get('ngo_public_name');
