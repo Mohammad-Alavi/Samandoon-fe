@@ -6,7 +6,7 @@ import { Article } from '../../../objects/article';
 @Injectable()
 export class ArticleApiService extends HttpService {
 
-  private getArticleUrl:     string = ApiConfig.API_URL + '/ngo/article';
+  private getArticleUrl: string = ApiConfig.API_URL + '/ngo/article';
 
   getArticle(article_id: string, callBack: ApiCallGet<Article>) {
     const response = this.http.get(this.getArticleUrl + '/' + article_id + '?include=ngo');
