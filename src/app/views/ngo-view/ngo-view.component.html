@@ -25,8 +25,8 @@
             <mat-expansion-panel-header>
                 <mat-panel-title>آدرس</mat-panel-title>
             </mat-expansion-panel-header>
-            <div>استان {{ ngo.location.province }}</div>
-            <div>شهرستان {{ ngo.location.city }}</div>
+            <div><span>استان: </span>{{ ngo.location.province }}</div>
+            <div><span>شهرستان: </span>{{ ngo.location.city }}</div>
             <div>{{ ngo.location.address }}</div>
         </mat-expansion-panel>
     </mat-card-footer>
@@ -48,12 +48,20 @@
         <!--<mat-card-subtitle *ngFor="let title of ngo.title">{{ title.title }}</mat-card-subtitle>-->
         <!--</div>-->
         <div id="registration-specification">
-            <div>{{ngo.registration_specification.national_number}}</div>
-            <div>{{ngo.registration_specification.registration_date}}</div>
-            <div>{{ngo.registration_specification.registration_number}}</div>
-            <div>{{ngo.registration_specification.registration_unit}}</div>
+            <div><span>شناسه ملی: </span>{{ngo.registration_specification.national_number}}</div>
+            <div><span>تاریخ ثبت: </span>{{ngo.registration_specification.registration_date}}</div>
+            <div><span>شماره ثبت: </span>{{ngo.registration_specification.registration_number}}</div>
+            <div><span>سازمان ثبت کننده: </span>{{ngo.registration_specification.registration_unit}}</div>
         </div>
-        <div id="ngo-phone-number" *ngFor="let phone of ngo.phone" selected>{{ phone.phone_number }}{{phone.label}}</div>
+        <div id="ngo-phone-number-wrapper">
+            <p>شماره های تماس</p>
+            <div id="ngo-phone-number" *ngFor="let phone of ngo.phone" selected>
+                <div>
+                    <span>{{phone.label}}: </span>
+                    {{ phone.phone_number}}
+                </div>
+            </div>
+        </div>
     </mat-card-content>
 
     <mat-card-footer>

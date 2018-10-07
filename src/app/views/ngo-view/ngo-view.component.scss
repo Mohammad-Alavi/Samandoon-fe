@@ -82,6 +82,35 @@
     #address {
       border: none;
       box-shadow: none;
+      div {
+        text-align: right;
+        span {
+          text-align: right;
+          font-weight: 600;
+        }
+      };
+    }
+  }
+}
+
+#ngo-details {
+  text-align: right;
+  #registration-specification {
+    div {
+      clear: left;
+      span {
+        text-align: right;
+        font-weight: 600;
+      }
+    }
+  }
+  #ngo-phone-number-wrapper {
+    p {
+      font-weight: 600;
+      margin: 15px 0px 0px;
+    }
+    #ngo-phone-number {
+      font-size: 0.9rem;
     }
   }
 }
