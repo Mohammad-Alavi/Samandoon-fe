@@ -43,7 +43,6 @@ class Subject {
 }
 
 class Phone {
-  id: number;
   label: string;
   phone_number: string;
 }
