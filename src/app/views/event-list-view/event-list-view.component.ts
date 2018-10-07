@@ -30,5 +30,4 @@ export class EventListViewComponent extends List<Event> {
     this.isLoading = true;
     this.eventApiService.getEventList(this.ngo.id, this.page, this);
   }
-
 }
