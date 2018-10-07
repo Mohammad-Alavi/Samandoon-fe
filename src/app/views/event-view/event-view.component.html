@@ -1,8 +1,15 @@
-<div class="card bg-dark text-white">
-  <img class="card-img" src="{{event.image.event_image_thumb}}" alt="Card image">
-  <div class="card-img-overlay">
-    <h5 class="card-title">{{event.title}}</h5>
-    <p class="card-text">{{event.description}}</p>
-    <p class="card-text">{{event.event_date | datePersian}}</p>
-  </div>
+<div class="timeline-item">
+    <div class="outer-body"></div>
+    <div class="event-top-meta">
+        <p class="timeline-date">
+            {{event.event_date|datePersianDayName}}
+            <span class="date-divider"> | </span>
+            {{event.event_date|datePersian}}
+        </p>
+        <h1>{{event.title}}</h1>
+    </div>
+    <div class="image-container">
+        <img class="event-img" src="{{event.image.event_image_thumb}}" alt="event image">
+        <div class="event-location">{{event.location.city}} / {{event.location.province}} / {{event.location.address}}</div>
+    </div>
 </div>

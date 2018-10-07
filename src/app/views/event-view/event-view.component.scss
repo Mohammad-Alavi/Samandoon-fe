@@ -1,0 +1,125 @@
+// ----------------  THE BASICS
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700');
+@import "../../../sass/variables";
+
+body {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+// ----------------  THE FONTS
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: right;
+  font-family: IRANSansWebFaNum, 'Oswald', sans-serif;
+}
+
+p {
+  font-family: IRANSansWebFaNum, 'Roboto', sans-serif;
+  font-size: .8rem;
+}
+
+// ----------------  THE FONTS
+
+$border-color: rgba(black, .3);
+
+.timeline-item {
+  padding: 1.2em 2em 2em;
+  position: relative;
+  color: rgba(black, .7);
+  border-right: 2px solid $border-color;
+  background-color: $white;
+
+  //border-top: 1px solid rgba(0, 0, 0, .1);
+  //border-left: 1px solid rgba(0, 0, 0, .1);
+  //border-bottom: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, .09);
+  border-radius: 2px;
+
+  margin-bottom: 20px;
+
+  .outer-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    border-left: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  &::after {
+    width: 40px;
+    height: 40px;
+    display: block;
+    top: 1em;
+    position: absolute;
+    right: -25px;
+    border-radius: 40px;
+    content: '';
+    border: 2px solid $border-color;
+    background: $purple;
+  }
+
+  &:last-child {
+    border-image: linear-gradient(
+                    to bottom,
+                    $border-color 60%,
+                    rgba($border-color, 0)) 1 100%;
+    border-image-width: 0px 1px 0px 0px;
+  }
+  .event-img {
+    max-height: 100%;
+    margin: 0;
+    max-width: 100%;
+    object-fit: fill;
+  }
+
+  .event-top-meta {
+    h1 {
+      font-size: 1rem;
+      //margin-bottom: .5em;
+      float: right;
+      clear: right;
+    }
+    //&::before {
+    .timeline-date {
+      //content: attr(date-is);
+      //position: absolute;
+      right: 2em;
+      font-weight: bold;
+      top: 1.5em;
+      display: block;
+      font-weight: 700;
+      font-size: .785rem;
+      border-bottom: 1px solid rgba(89, 90, 183, .3);
+      float: right;
+      margin: 0;
+    }
+    .date-divider {
+      color: $purple;
+    }
+
+  }
+  .image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    .event-location {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      font-size: 0.85rem;
+      height: 30px;
+      width: auto;
+      background-color: rgba(0, 0, 0, .3);
+      padding:5px;
+    }
+  }
+}
