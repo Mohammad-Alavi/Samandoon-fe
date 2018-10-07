@@ -1,0 +1,11 @@
+@import '../../../sass/variables';
+
+.page-footer {
+  background-color: $primary;
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    //flex-direction: column;
+  }
+}

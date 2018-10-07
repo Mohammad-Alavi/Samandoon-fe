@@ -10,8 +10,7 @@ body{
     font-size: 1rem;
     background-color: $main-bg-color;
     p {
-        margin: 0.8rem;
-        margin-top: 0;
+        margin: 0 0.8rem 0.8rem;
         text-align: right;
     }
 }
@@ -19,11 +18,4 @@ body{
 .box-shadow {
     box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2);
     transition: box-shadow 83ms;
-}
-
-.core-rail {
-    box-sizing: border-box;
-    float: right;
-    margin-left: -1px;
-    width: calc((576px * .5) + 264px);
 }

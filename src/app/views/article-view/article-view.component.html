@@ -1,39 +1,42 @@
-<!--<div class="single-article">-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <mat-card>
-        <mat-card-header>
-            <!--<div mat-card-avatar class="header-image"-->
-                 <!--[style.background-image]="'url(' + article.image.article_image_thumb + ')'"></div>-->
-            <!--<mat-card-title>محمد علوی</mat-card-title>-->
-            <!--<mat-card-subtitle>{{ article.ngo.name }}</mat-card-subtitle>-->
-        </mat-card-header> <!-- card header -->
-        <div class="description">
-            <p id="created-at">{{ article.created_at | datePersian }}</p>
-            <!--<div class="divider"></div>-->
-        </div>
-        <article class="card position-relative">
-            <img mat-card-image src="{{article.image.article_image}}" alt="Photo of Article">
-            <div ellipsis [ellipsis-content]="article.text" ellipsis="(ادامه)..." ellipsis-word-boundaries=" \n" class="description-data" (ellipsis-click-more)="moreClicked()">
-                <!--<input type="checkbox" class="read-more-state" id="{{ article.id }}" />-->
-                <!--<label for="{{ article.id }}" class="read-more-trigger"></label>-->
-                <!--<p class="read-more-wrap">{{ textPrt1 }}<span class="read-more-target">{{ textPrt2 }}</span></p>-->
+<div id="article-title-divider"></div>
+<mat-card>
+    <!--<div class="article-like-count">{{article.like_count}}<mat-icon>thumb_up</mat-icon></div>-->
+    <mat-card-header>
+    </mat-card-header> <!-- card header -->
+
+    <a class="article" href="#">
+        <div class="post-wrapper">
+            <div class="post-image-container">
+                <img src="{{article.image.article_image}}" alt="Photo of Article">
             </div>
-            <!--<ul class="social-counts">-->
-                <!--<li></li>-->
-                <!--<li></li>-->
-            <!--</ul>-->
-        </article> <!-- article -->
-        <mat-card-content>
-            <!--<p id="like-count">{{ article.like_count }} پسند</p>-->
-        </mat-card-content>
-        <!--<mat-card-actions>-->
-            <!--<button mat-button>پسندیدم</button>-->
-            <!--<button mat-button>اشتراک گذاری</button>-->
-        <!--</mat-card-actions>-->
-        <mat-card-footer>
-            <mat-icon svgIcon="thumbs-up"></mat-icon>{{article.seen_count}}
-            <div>{{article.like_count}} :پسند</div>
-        </mat-card-footer>
-    </mat-card>  <!-- card -->
+            <div class="post-meta-container">
+                <h4 id="title">{{ article.title }}</h4>
+                <div class="article-description">
+                    <div id="created-at">
+                        {{ article.created_at | datePersianMonthLetter }}
+                        {{ article.created_at | datePersianYear }},{{ article.created_at | datePersianDayNumber }}
+                    </div>
+                    <div class="article-count-divider">/</div>
+                    <div class="article-count">
+                        <div class="counts">{{article.seen_count}}</div>
+                        <mat-icon>remove_red_eye</mat-icon>
+                    </div>
+                    <div class="article-count-divider">/</div>
+                    <div class="article-count">
+                        <div class="counts">{{article.like_count}}</div>
+                        <mat-icon>thumb_up</mat-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    <mat-card-content>
+    </mat-card-content>
+    <!--<mat-card-actions>-->
+    <!--<button mat-button>پسندیدم</button>-->
+    <!--<button mat-button>اشتراک گذاری</button>-->
+    <!--</mat-card-actions>-->
+    <!--<mat-card-footer>-->
+    <!--</mat-card-footer>-->
+</mat-card>  <!-- card -->
 <!--</div>-->
