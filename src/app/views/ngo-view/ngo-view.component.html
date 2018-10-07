@@ -47,13 +47,13 @@
         <!--<div class="card-info">-->
         <!--<mat-card-subtitle *ngFor="let title of ngo.title">{{ title.title }}</mat-card-subtitle>-->
         <!--</div>-->
-        <div class="registration-specification">
+        <div id="registration-specification">
             <div>{{ngo.registration_specification.national_number}}</div>
             <div>{{ngo.registration_specification.registration_date}}</div>
             <div>{{ngo.registration_specification.registration_number}}</div>
             <div>{{ngo.registration_specification.registration_unit}}</div>
         </div>
-        <!--<div *ngFor="let phone of ngo.phone" selected [color]="primary">{{ phone.phone_number }}{{phone.label}}</div>-->
+        <div id="ngo-phone-number" *ngFor="let phone of ngo.phone" selected>{{ phone.phone_number }}{{phone.label}}</div>
     </mat-card-content>
 
     <mat-card-footer>
