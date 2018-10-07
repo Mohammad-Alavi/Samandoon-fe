@@ -10,10 +10,10 @@ $border-color: rgba(black, .3);
   border: 1px solid rgba(0, 0, 0, .1);
   margin-bottom: 70px;
 
-  div {
+  :not(:last-child) {
     margin-bottom: 30px;
   }
-
+  
   .event-img {
     max-height: 100%;
     margin: 0;
