@@ -1,13 +1,50 @@
 <app-base-page>
-  <h1>
-    THIS IS A TEST TO SEE IF <strong>ARTICLE</strong> WORKS.
-    <br>
-    <br>
-    <br>
-  </h1>
+    <div class="row">
 
-  <app-article-view [article]="article"></app-article-view>
+        <!--<aside class="col-3 left-col border">-->
+        <!--&lt;!&ndash;<aside class="col-3 left-rail border">&ndash;&gt;-->
+        <!--</aside> &lt;!&ndash; LEFT COL &ndash;&gt;-->
 
-  <h2>Comments:</h2>
-  <app-comment-list-view [article]="article"></app-comment-list-view>
+        <div class="col-8 mid-col" dir="rtl">
+
+            <div class="article" routerLink="/article/{{article.id}}">
+                <div class="post-wrapper">
+                    <div class="post-image-container">
+                        <img src="{{article.image.article_image}}" alt="Photo of Article">
+                    </div>
+                    <h4 id="title">{{ article.title }}</h4>
+                    <div class="post-meta-container">
+                        <div class="article-description">
+                            <div id="created-at">
+                                {{ article.created_at | datePersianMonthLetter }}
+                                {{ article.created_at | datePersianYear }},{{ article.created_at |
+                                datePersianDayNumber }}
+                            </div>
+                            <div class="article-count-divider">/</div>
+                            <div class="article-count">
+                                <div class="counts">{{article.seen_count}}</div>
+                                <mat-icon>remove_red_eye</mat-icon>
+                            </div>
+                            <div class="article-count-divider">/</div>
+                            <div class="article-count">
+                                <div class="counts">{{article.like_count}}</div>
+                                <mat-icon>thumb_up</mat-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="article-text">{{article.text}}</div>
+                    <div id="comment">
+                        <h2 id="comment-count"><span>{{article.comment_count}}</span> دیدگاه</h2>
+                        <div id="comment-list"><app-comment-list-view [article]="article"></app-comment-list-view></div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- CENTER COL -->
+
+        <aside class="col-3 pull-left">
+            <!--<aside class="flex-column w-auto">-->
+            <app-ngo-view [ngo]="article.ngo"></app-ngo-view>
+        </aside> <!-- RIGHT COL -->
+    </div> <!-- ROW -->
 </app-base-page>

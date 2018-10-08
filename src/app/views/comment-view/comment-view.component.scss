@@ -1,0 +1,29 @@
+#comment-meta {
+  margin-bottom: 20px;
+
+  #comment-creator-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    float: right;
+    margin-left: 5px;
+  }
+
+  #creator-name {
+    font-size: .8rem;
+    float: right;
+  }
+
+  #comment-created-at {
+    float: left;
+  }
+}
+
+#comment-body {
+  clear: both;
+  padding-top: 10px;
+  margin-right: 35px;
+  margin-bottom: 30px;
+}
