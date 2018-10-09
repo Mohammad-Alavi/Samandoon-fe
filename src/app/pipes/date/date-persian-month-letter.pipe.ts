@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import * as moment from 'jalali-moment';
 import { Date } from '../../objects/date';
+
 /*
  * Converts the date object to first 3 letters of persian month name
  * Usage:

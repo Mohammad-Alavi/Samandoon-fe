@@ -22,7 +22,8 @@ export class NgoPageComponent implements OnInit, ApiCallGet<Ngo> {
   constructor(private route: ActivatedRoute,
               private ngoApiService: NgoApiService,
               // private router: Router
-  ) {}
+  ) {
+  }
 
   getNgo() {
     const ngo_public_name = this.route.snapshot.paramMap.get('ngo_public_name');

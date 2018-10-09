@@ -8,7 +8,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class BasePageComponent implements OnInit {
 
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
