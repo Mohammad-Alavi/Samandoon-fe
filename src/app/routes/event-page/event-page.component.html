@@ -1,20 +1,35 @@
-<h1>
-  THIS IS A TEST TO SEE IF <strong>EVENT</strong> WORKS.
-  <br>
-  <br>
-  <br>
-</h1>
+<app-base-page>
+  <div class="row">
 
-<strong>
-  event id: {{event.id}}
-</strong>
+    <!--<aside class="col-3 left-col border">-->
+    <!--&lt;!&ndash;<aside class="col-3 left-rail border">&ndash;&gt;-->
+    <!--</aside> &lt;!&ndash; LEFT COL &ndash;&gt;-->
 
-<p>
-  <strong>
-    ngo name: {{event.ngo.name}}
-  </strong>
-</p>
-<p>
-  {{event.description}}
-</p>
-<p>{{event.event_date | datePersian}}</p>
+    <div class="col-8 mid-col" dir="rtl">
+
+      <div class="event" routerLink="/event/{{event.id}}">
+        <div class="event-wrapper">
+          <div class="post-image-container">
+            <img src="{{event.image.event_image}}" alt="Photo of event">
+          </div>
+          <h4 id="title">{{ event.title }}</h4>
+          <div class="post-meta-container">
+            <div class="event-description">
+              <div id="created-at">
+                {{ event.created_at | datePersianMonthLetter }}
+                {{ event.created_at | datePersianYear }},{{ event.created_at |
+                datePersianDayNumber }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- CENTER COL -->
+
+    <aside class="col-3 pull-left">
+      <!--<aside class="flex-column w-auto">-->
+      <app-ngo-view [ngo]="event.ngo"></app-ngo-view>
+    </aside> <!-- RIGHT COL -->
+  </div> <!-- ROW -->
+</app-base-page>
