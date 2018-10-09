@@ -16,7 +16,9 @@ export class PaginationLoadMoreComponent {
   }
 
   loadMore() {
-    if (!this.isEnded && !this.isLoading) { this.pageable.loadMore(); }
+    if (!this.isEnded && !this.isLoading) {
+      this.pageable.loadMore();
+    }
   }
 
 }

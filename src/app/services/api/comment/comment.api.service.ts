@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from '../http.service';
 import { ApiConfig } from '../api.config';
-import { Event } from '../../../objects/event';
 import { Comment } from '../../../objects/comment';
 
 @Injectable()

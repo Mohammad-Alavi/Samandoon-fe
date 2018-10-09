@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Article } from '../../objects/article';
-import {text} from '@angular/core/src/render3/instructions';
+import { text } from '@angular/core/src/render3/instructions';
 
 @Component({
   selector: 'app-article-view',
@@ -14,6 +14,7 @@ export class ArticleViewComponent implements OnInit {
   position = 150;
   textPrt1: string;
   textPrt2: string;
+
   constructor() {
   }
 
