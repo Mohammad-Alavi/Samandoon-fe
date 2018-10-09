@@ -3,7 +3,7 @@
     <div class="card-bg-image" [style.background-image]="'url(' + ngo.images.ngo_banner_thumb + ')'"></div>
 
     <mat-card-header>
-        <a mat-card-avatar href="#" [style.background-image]="'url(' + ngo.images.ngo_logo_thumb + ')'"></a>
+        <a mat-card-avatar routerLink="/{{ngo.public_name}}" [style.background-image]="'url(' + ngo.images.ngo_logo_thumb + ')'"></a>
     </mat-card-header> <!-- card header -->
 
     <mat-card-content>
