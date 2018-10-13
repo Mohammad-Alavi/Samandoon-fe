@@ -15,8 +15,8 @@ class CommentUser {
   images: CommentUserAvatar;
   ngo_data: CommentNgo;
 
-  hasNgo = this.ngo_data != null;
-  hasConfirmedNgo = this.ngo_data != null && this.ngo_data.confirmed === true;
+  hasNgo = this.ngo_data.ngo_id != null;
+  hasConfirmedNgo = this.hasNgo && this.ngo_data.confirmed === true;
 }
 
 class CommentNgo {
