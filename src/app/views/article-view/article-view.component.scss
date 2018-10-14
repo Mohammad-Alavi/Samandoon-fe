@@ -56,7 +56,7 @@ a.article {
   text-decoration: none;
   background-color: transparent;
   border: 0;
-  color: #665ed0;
+  color: $semiblack;
   text-align: right;
   height: auto;
 
@@ -84,7 +84,6 @@ a.article {
         text-align: right;
         font-weight: 600;
         margin: 7px 10px 0 0;
-        font-family: IRANSansWebFaNum, 'Oswald', sans-serif;
       }
 
       div.article-description {
