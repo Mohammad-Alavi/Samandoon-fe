@@ -5,6 +5,7 @@
     </div>
     <div id="creator-name">{{comment.creator_data.first_name}} {{comment.creator_data.last_name}}</div>
     <div id="comment-created-at">{{comment.created_at | datePersian}}</div>
-    <div id="creator-ngo-name" *ngIf="comment.creator_data.ngo_data.confirmed === true">{{comment.creator_data.ngo_data.name}}</div>
+    <!--<a class="event" routerLink="/event/{{event.id}}">-->
+    <a id="creator-ngo-name" routerLink="/{{comment.creator_data.ngo_data.public_name}}" *ngIf="comment.creator_data.ngo_data.confirmed === true">{{comment.creator_data.ngo_data.name}}</a>
 </div>
 <div id="comment-body">{{comment.body}}</div>
