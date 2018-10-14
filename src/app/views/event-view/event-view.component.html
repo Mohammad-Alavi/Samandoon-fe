@@ -6,10 +6,14 @@
             <span class="date-divider"> | </span>
             {{event.event_date|datePersian}}
         </p>
-        <h1>{{event.title}}</h1>
     </div>
-    <div class="image-container">
-        <img class="event-img" src="{{event.image.event_image_thumb}}" alt="event image">
-        <div class="event-location">{{event.location.city}} / {{event.location.province}} / {{event.location.address}}</div>
-    </div>
+    <a class="event" routerLink="/event/{{event.id}}">
+        <h2>{{event.title}}</h2>
+        <div class="image-container">
+            <img class="event-img" src="{{event.image.event_image_thumb}}" alt="event image">
+            <div class="event-location">{{event.location.city}} / {{event.location.province}} /
+                {{event.location.address}}
+            </div>
+        </div>
+    </a>
 </div>
