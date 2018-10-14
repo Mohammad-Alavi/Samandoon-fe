@@ -22,6 +22,7 @@ class CommentUser {
 class CommentNgo {
   ngo_id: string;
   name: string;
+  public_name: string;
   confirmed: boolean;
 }
 
