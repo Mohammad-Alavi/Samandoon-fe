@@ -1,25 +1,5 @@
 // ----------------  THE BASICS
-@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700');
 @import "../../../sass/variables";
-
-body {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-// ----------------  THE FONTS
-
-h1, h2, h3, h4, h5, h6 {
-  text-align: right;
-  font-family: IRANSansWebFaNum, 'Oswald', sans-serif;
-}
-
-p {
-  font-family: IRANSansWebFaNum, 'Roboto', sans-serif;
-  font-size: .8rem;
-}
-
-// ----------------  THE FONTS
 
 $border-color: rgba(black, .3);
 
@@ -104,13 +84,14 @@ $border-color: rgba(black, .3);
       color: $purple;
     }
   }
-    h1 {
+    h2 {
       font-size: 1rem;
       //margin-bottom: .5em;
       float: right;
       clear: right;
       padding-top: 5px;
       padding-bottom: 5px;
+      color: $semiblack;
     }
   .image-container {
     position: relative;
