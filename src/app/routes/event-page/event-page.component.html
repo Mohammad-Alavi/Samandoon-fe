@@ -1,35 +1,37 @@
 <app-base-page>
-  <div class="row">
+    <div class="row">
 
-    <!--<aside class="col-3 left-col border">-->
-    <!--&lt;!&ndash;<aside class="col-3 left-rail border">&ndash;&gt;-->
-    <!--</aside> &lt;!&ndash; LEFT COL &ndash;&gt;-->
+        <!--<aside class="col-3 left-col border">-->
+        <!--&lt;!&ndash;<aside class="col-3 left-rail border">&ndash;&gt;-->
+        <!--</aside> &lt;!&ndash; LEFT COL &ndash;&gt;-->
 
-    <div class="col-8 mid-col" dir="rtl">
-
-      <div class="event" routerLink="/event/{{event.id}}">
-        <div class="event-wrapper">
-          <div class="post-image-container">
-            <img src="{{event.image.event_image}}" alt="Photo of event">
-          </div>
-          <h4 id="title">{{ event.title }}</h4>
-          <div class="post-meta-container">
-            <div class="event-description">
-              <div id="created-at">
-                {{ event.created_at | datePersianMonthLetter }}
-                {{ event.created_at | datePersianYear }},{{ event.created_at |
-                datePersianDayNumber }}
-              </div>
+        <div class="col-7 offset-1 mid-col" dir="rtl">
+            <div class="timeline-item">
+                <div class="outer-body"></div>
+                <div class="event-top-meta">
+                    <p class="timeline-date">
+                        {{event.event_date|datePersianDayName}}
+                        <span class="date-divider"> | </span>
+                        {{event.event_date|datePersian}}
+                    </p>
+                </div>
+                <a class="event" routerLink="/event/{{event.id}}">
+                    <h2>{{event.title}}</h2>
+                    <div class="image-container">
+                        <img class="event-img" src="{{event.image.event_image_thumb}}" alt="event image">
+                        <div class="event-location">{{event.location.city}} / {{event.location.province}} /
+                            {{event.location.address}}
+                        </div>
+                    </div>
+                </a>
             </div>
-          </div>
+
+
         </div>
-      </div>
 
-    </div> <!-- CENTER COL -->
-
-    <aside class="col-3 pull-left">
-      <!--<aside class="flex-column w-auto">-->
-      <app-ngo-view [ngo]="event.ngo"></app-ngo-view>
-    </aside> <!-- RIGHT COL -->
-  </div> <!-- ROW -->
+        <aside class="col-3">
+            <!--<aside class="flex-column w-auto">-->
+            <app-ngo-view [ngo]="event.ngo"></app-ngo-view>
+        </aside> <!-- RIGHT COL -->
+    </div> <!-- ROW -->
 </app-base-page>
