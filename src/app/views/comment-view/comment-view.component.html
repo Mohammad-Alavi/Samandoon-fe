@@ -1,9 +1,10 @@
 <div id="comment-meta">
     <div id="comment-creator-avatar"
-         [style.background-image]="'url(' + comment.creator_data.images.avatar_thumb + ')'"></div>
+         [style.background-image]="'url(' + comment.creator_data.images.avatar_thumb + ')'">
+        <mat-icon matTooltip="سمن تایید شده" *ngIf="comment.creator_data.ngo_data.confirmed === true">verified_user</mat-icon>
+    </div>
     <div id="creator-name">{{comment.creator_data.first_name}} {{comment.creator_data.last_name}}</div>
-    <!--<div>{{comment.ngo_data.name}}</div>-->
     <div id="comment-created-at">{{comment.created_at | datePersian}}</div>
-    <!--<div id="creator-ngo"><div ng-if="ngo.name">{{ngo.name}}</div></div>-->
+    <div id="creator-ngo-name" *ngIf="comment.creator_data.ngo_data.confirmed === true">{{comment.creator_data.ngo_data.name}}</div>
 </div>
 <div id="comment-body">{{comment.body}}</div>
