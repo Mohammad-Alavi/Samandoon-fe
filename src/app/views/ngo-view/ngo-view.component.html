@@ -1,6 +1,7 @@
 <mat-card id="ngo-main">
 
-    <div class="card-bg-image" [style.background-image]="'url(' + ngo.images.ngo_banner_thumb + ')'"></div>
+    <!--<div id="card-ngo-banner-image" [style.background-image]="'url(' + ngo.images.ngo_banner_thumb + ')'"></div>-->
+    <img id="card-ngo-banner-image" src="{{ngo.images.ngo_banner_thumb}}" alt="Ngo Banner">
 
     <mat-card-header>
         <a mat-card-avatar routerLink="/{{ngo.public_name}}" [style.background-image]="'url(' + ngo.images.ngo_logo_thumb + ')'"></a>
