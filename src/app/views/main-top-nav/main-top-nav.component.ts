@@ -7,7 +7,4 @@ import {BaseComponent} from '../../base.component';
     styleUrls: ['./main-top-nav.component.scss']
 })
 export class MainTopNavComponent extends BaseComponent {
-
-    constructor() {
-    }
 }
