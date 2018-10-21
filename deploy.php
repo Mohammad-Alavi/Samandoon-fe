@@ -4,17 +4,22 @@ namespace Deployer;
 require 'recipe/common.php';
 
 // Project name
-set('application', 'my_project');
+set('application', 'samandoon-fe');
+
+// Configuration
+
+set('ssh_type', 'native');
+set('ssh_multiplexing', false);
 
 // Project repository
 set('repository', 'https://github.com/Mohammad-Alavi/Samandoon-fe.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true); 
+//set('git_tty', true);
 
 // Shared files/dirs between deploys 
-set('shared_files', []);
-set('shared_dirs', []);
+//set('shared_files', []);
+//set('shared_dirs', []);
 
 // Writable dirs by web server 
 set('writable_dirs', []);
@@ -22,8 +27,17 @@ set('writable_dirs', []);
 
 // Hosts
 
-host('project.com')
-    ->set('deploy_path', '~/{{application}}');    
+// Servers
+
+host('smndn.ir')
+    ->user('root')
+    ->port(22)
+    //->password('oQg70v8F5i')
+    ->configFile('~/.ssh/config')
+    ->identityFile('~/.ssh/id_rsa')
+    ->set('deploy_path', '/home/admin/domains/smndn.ir')
+    ->forwardAgent();
+//    ->pty(true);
     
 
 // Tasks
